@@ -630,6 +630,10 @@ ul.header-top-1-contact-info li a:hover {
 	cursor: pointer;
 	border-radius: 50%;
 }
+.mobile-nav-toggler i {
+    font-size: 1.8rem; /* Ajusta el tamaño según prefieras */
+    line-height: 1;
+}
 .main-menu .inner-container {
 	box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.12);
 	margin-bottom: -25px;
@@ -1246,12 +1250,17 @@ ul.header-top-1-contact-info li a:hover {
 	cursor: pointer;
 	border-radius: 50%;
 	float: right;
-	margin: 13px 0;
-	margin-left: 15px;
+	/* margin: 13px 0;
+	margin-left: 15px; */
 	display: none;
 	border: 1px solid #fff;
 	transition: .5s;
 }
+/* .nav-outer .mobile-nav-toggler{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 .header-style-eight .mobile-nav-toggler:hover,
 .nav-outer .mobile-nav-toggler:hover {
 	background-color: var(--theme-color);

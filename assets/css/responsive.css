@@ -89,12 +89,14 @@
 }
 @media only screen and (max-width: 1200px){
 	/* Default */
-	.main-header .nav-outer .main-menu,
-	.sticky-header{
+	.main-header .nav-outer .main-menu{
 		display: none !important;
 	}
 	.nav-outer .mobile-nav-toggler {
 		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.banner-section .banner-slider-nav {
 		display: none;
@@ -374,6 +376,15 @@
 	}
 	.reply-comment.ml_100 {
 		margin-left: 20px;
+	}
+	.pt_160 {
+        padding-top: 100px !important; /* Ajusta el valor según lo que necesites */
+    }
+	.pb_90{
+		padding-bottom: 70px !important;
+	}
+	.pt_110{
+		padding-top: 50px !important;
 	}
 }
 @media only screen and (max-width: 575px){
