@@ -110,7 +110,7 @@
             <p class="fs_18 c_dark mt_10">Completá el formulario y un asesor del equipo de CLH se pondrá en contacto con vos.</p>
             </div>
 
-            <form action="#" method="post" class="row g-4">
+            <form id="contact-form" action="https://formspree.io/f/xnnzqpkp" method="post" class="row g-4">
             <div class="col-md-6">
                 <input type="text" name="nombre" class="form-control border border-2 border-black" placeholder="Nombre completo" required>
             </div>
@@ -132,6 +132,10 @@
                 </button>
             </div>
             </form>
+
+            <div id="form-message" class="alert alert-success text-center d-none mt-4">
+                ✅ Tu mensaje fue enviado con éxito. Gracias por contactarnos.
+            </div>
         </div>
     </section>
 
@@ -200,6 +204,33 @@
 
 <script src="assets/js/odometer.min.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            form.reset();
+            document.getElementById('form-message').classList.remove('d-none');
+        } else {
+            alert('Ocurrió un error. Intenta de nuevo más tarde.');
+        }
+    } catch (error) {
+        alert('Ocurrió un error al enviar el formulario.');
+    }
+});
+</script>
 
 </body>
 </html>
